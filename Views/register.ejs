@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
   <link rel="stylesheet" href="css/loginRegister.css">
+  <link rel="stylesheet" href="css/registeronly.css"
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -18,22 +19,27 @@
       <div class="input-field">
         <input type="text" name="fullName" required>
         <label>Enter your full name</label>
+        <span class="tooltip">3–50 letters and spaces only (no numbers/symbols)</span>
       </div>
       <div class="input-field">
         <input type="text" name="userName" required>
         <label>Enter your username</label>
+        <span class="tooltip">Must be 4-15 characters: letters, numbers or underscore</span>
       </div>
       <div class="input-field">
         <input type="email" name="email" required>
         <label>Enter your email</label>
+        <span class="tooltip">Must be a valid email (like someone@example.com)</span>
       </div>
       <div class="input-field">
         <input type="password" name="password" required>
         <label>Enter your password</label>
+        <span class="tooltip">3–15 characters, at least one lowercase, one uppercase, and one letter/number</span>
       </div>
       <div class="input-field">
         <input type="password" name="confirmPassword" required>
         <label>Confirm your password</label>
+        <span class="tooltip">Must match the above password</span>
       </div>
       <button class="registerBtn"type="submit">Sign up</button>
       <div class="register">
