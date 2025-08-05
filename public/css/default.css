@@ -1,0 +1,299 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+/* 🎬 Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* 🎥 Background Image */
+body {
+    background: url('../resources/300wallpaper.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+/* 🎬 Dark Overlay for Cinematic Look */
+body::before {
+    content: "";
+    position: fixed;   /* Keep it fixed in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: -1;  /* Set a lower z-index to be under the modal */
+    pointer-events: none; /* Allow interaction with elements below */
+  }
+  
+/* 🎬 Flexbox Styling */
+.mb-4 {
+    display: flex;
+    flex-flow: row;
+}
+
+.form-control {
+    height: 10%; /* Set the height of the form control */
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect for movie image */
+}
+
+/* 🎬 Movie Details & Images */
+.correction {
+    margin-left: 3%; /* Correction for left margin */
+    margin-right: 10px;
+}
+
+.iframe-container {
+    margin: 20px;
+    padding: 10px;
+    display: none; /* Hide iframe container by default */
+}
+
+.movie-image {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect for movie image */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.movie-details {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for movie details */
+}
+
+/* 🎬 Row Styling */
+.row .own2{
+    border-radius: 8px;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hide-btn {
+    visibility:hidden;
+}
+
+.row {
+    color: black;
+}
+
+/* 🎥 Title Animation */
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient effect for title */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flicker 2s infinite alternate; /* Flickering effect for title */
+}
+
+/* 🎞️ Flickering Animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* 🎬 Movie Image */
+.movie-image img {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+
+/* 🎥 Card Styling */
+.card {
+    background-color: rgba(30, 30, 30, 0.3);
+    color: white;
+    display: flex;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for cards */
+    justify-content: space-between;
+    flex-direction: column;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    width: 500px;
+    height: 600px;
+    opacity: 0;
+}
+
+.card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🎬 Card Body */
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+/* 🎥 Card Title and Text */
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Truncate title with ellipsis */
+}
+
+.card-text {
+    font-size: 16px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    overflow-y: auto; 
+    white-space: normal;
+    max-height: 100%;
+}
+
+/* 🎬 Button Styling */
+.btn-primary {
+    background-color: #ffae00;
+    border-color: #000000;
+    color: black;
+}
+
+.btn-danger {
+    background-color: red;
+    color: black;
+    border-color: #000000;
+    margin: 5px;
+}
+
+/* 🎥 Button Hover Effects */
+.btn-danger:hover {
+    background: rgb(145, 41, 41);
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ffbb00;
+    border-color: #000000;
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+
+/* 🎬 Card Image Effects */
+.card img {
+    border-radius: 8px;
+    width: 100%; 
+    height: auto;
+    display: flex;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* 🎥 Card Hover Effects */
+.card:hover img {
+    transform: scale(1.1); /* Image zoom effect */
+}
+
+.card:hover {
+    background-color: #333; 
+    color: #f8f9fa;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Hover shadow effect */
+    cursor: pointer;
+}
+
+/* 🎬 Movie Image Hover Effects */
+.movie-image:hover {
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* 🎥 Footer Styling */
+footer {
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    color: #fff;
+    text-align: center; 
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 10; 
+}
+
+/* 🎬 Spinner Container */
+.spinner-container {
+    position: fixed;
+    top: 50%;  /* Center it vertically */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Precise centering */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1050; /* Ensure it's above other elements */
+    visibility: hidden; /* Hidden by default */
+}
+
+/* 🎥 Spinner Styling */
+.spinner-border {
+    width: 200px;
+    height: 200px;
+    border-width: 8px;
+}
+
+/* 🎬 Secondary Spinner */
+.spinner-container-second {
+    margin-top: 10px; 
+    display: none;
+}
+
+.spinner-border-second {
+    width: 100px;
+    height: 100px;
+    border-width: 8px;
+}
+
+/* 🎥 Star Rating */
+.star {
+    font-size: 24px;
+    color: black; /* Default color */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.star.selected {
+    color: gold; /* Highlight selected stars in gold */
+}
+
+/* 🎬 Layout for Reviews */
+.other-container {
+    width: 50%;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.review-side {
+    width: 45%;
+    padding: 10px;
+}
+
+.separator {
+    width: 2px; 
+    background-color: #ccc; 
+    margin: 0 10px;
+}

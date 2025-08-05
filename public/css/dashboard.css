@@ -1,0 +1,447 @@
+/* 🎬 Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* 🎞️ Table Column Widths */
+.custom-table th:nth-child(1) { width: 6%; } /* Link ID */
+.custom-table th:nth-child(2) { width: 9%; } /* Posted By */
+.custom-table th:nth-child(3) { width: 15%  } /* Link Name */
+.custom-table th:nth-child(4) { width: 25%; } /* Description */
+.custom-table th:nth-child(5) { width: 10%; } /* Link */
+.custom-table th:nth-child(6) { width: 5%;  } /* Privacy */
+.custom-table th:nth-child(7) { width: 20%; } /* Actions */
+.custom-table th:nth-child(8) { width: 5%; } /* Rating */
+.custom-table th:nth-child(9) { width: 5%; } /* Clicks */
+
+.custom-table-second th:nth-child(1){ width: 20%;}
+.custom-table-second th:nth-child(2){ width: 20%; }
+.custom-table-second th:nth-child(3){ width: 20%; }
+.custom-table-second th:nth-child(4){ width: 20%; }
+.custom-table-second th:nth-child(5){ width: 20%; }
+
+.third th:nth-child(1){ width: 5%; }
+.third th:nth-child(2){ width: 5%; }
+.third th:nth-child(3){ width: 15%; }
+.third th:nth-child(4){ width: 15%; }
+.third th:nth-child(5){ width: 5%; }
+.third th:nth-child(6){ width: 10%; }
+.third th:nth-child(7){ width: 10%; }
+.third th:nth-child(8){ width: 5%; }
+
+.container-fluid {
+    padding: 10px;
+}
+
+.right{
+    margin-right: 20px;
+    margin-left: 50px;
+}
+#search-txt {
+    margin-left: 15rem;
+    display: none;
+}
+
+/* 🎬 Container for Centering */
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control-search{
+    display: block;
+    width: 30%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+/* 🎥 Main Heading Styles */
+.container h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flicker 2s infinite alternate; /* Flickering effect */
+}
+
+/* 🎬 Fallback Heading Styles */
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flicker 2s infinite alternate; /* Flickering effect */
+}
+
+h5{
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flicker 2s infinite alternate; /* Flickering effect */
+}
+
+/* 🎞️ Table Header Styling */
+.custom-table th {
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flicker 2s infinite alternate; /* Flickering effect */
+    text-align: center;
+    padding: 12px 15px;
+    font-weight: bold;
+}
+
+.custom-table td{
+    background-color: black;
+}
+
+.custom-table tr{
+    background-color: black;
+}
+
+/* 🎥 Table Scroll Behavior */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+}
+
+/* 🎬 Table Styles */
+.custom-table {
+    margin-top: 20px;
+    min-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(40px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.custom-table-second{
+    transform: translateX(40px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.custom-table-second.fade-in{
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+}
+.custom-table.fade-in {
+    opacity: 1;
+    transform: translateX(0); /* End at original position */
+}
+
+
+/* 🎥 Button Styling */
+.custom-table .btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* 🎞️ Button Hover Effects */
+.custom-table .btn-outline-primary:hover {
+    color: black;
+    background-color: lightblue;
+}
+
+.custom-table .btn-info:hover {
+    background-color: #138496; /* Hover color for info buttons */
+}
+
+/* 🎬 Background & Layout */
+body {
+    background: url('../resources/dashboard1.jpg') no-repeat center center/cover;
+    overflow: auto;
+    background-attachment: fixed;
+}
+
+/* 🎥 Spinner Styles */
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1050; /* Ensures spinner is on top */
+  display: none;
+}
+
+/* 🎬 Spinner Sizing */
+.spinner-border {
+    width: 200px;
+    height: 200px;
+    border-width: 8px;
+}
+
+/* 🎞️ Flickering Effect (For Titles) */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+
+/* 🎬 Secondary Spinner (Hidden by default) */
+.spinner-container-second {
+    margin-top: 10px; 
+    display: none;
+}
+
+.spinner-border-second {
+    width: 100px;
+    height: 100px;
+    border-width: 8px;
+}
+
+/* 🎥 Star Rating */
+.star {
+    font-size: 24px;
+    color: black; /* Default color */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.star.selected {
+    color: gold; /* Change to gold when selected */
+}
+
+/* 🎬 Layout for Reviews */
+.other-container {
+    width: 50%;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+}
+
+.review-side {
+    width: 45%;
+    padding: 10px;
+}
+
+.separator {
+    width: 2px; 
+    background-color: #ccc; 
+    margin: 0 10px;
+}
+
+/* 🎥 Button Styles */
+.custom-danger-second {
+    background-color: red;
+    border: black;
+    color: white;
+}
+
+.btn-dark {
+    background-color: rgb(68, 57, 57); /* Dark button */
+}
+
+/* 🎬 Danger Button */
+.btn-danger {
+    background-color: red;
+    color: black;
+    border-color: #000000;
+    margin: 5px;
+    margin-right: 20px;
+}
+
+/* 🎥 Button Hover Effects */
+.btn-danger:hover {
+    background: rgb(145, 41, 41);
+    transform: scale(1.1);
+    transition: all 0.4s ease;
+}
+
+/* 🎬 Primary Button (Second Variant) */
+.btn-primary-second {
+    margin-left: 10px;
+    background-color: #ffae00;
+    border-color: #000000;
+    color: black;
+}
+
+.btn-primary-third{
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: #ffae00;
+    border-color: #000000;
+    color: black;
+    margin-bottom: 5px;
+}
+.btn-primary-third:hover{
+    background-color: #ff6600;
+    color: white;
+    border-color: black;
+}
+/* 🎞️ Hover Effects for Primary Button (Second Variant) */
+.btn-primary-second:hover {
+    background-color: #ff6600;
+    color: white;
+    border-color: black;
+}
+
+/* 🎥 Centering Text */
+.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.container-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.custom-card{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffc107;
+    color: #ffc107;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+.custom-card:hover {
+    color: black;
+    background-color: #ffc107;
+    transform: translateY(-3px);
+}
+
+.users i{
+    color: red;
+}
+
+.total-links i{
+    color: blue;
+}
+
+.total-reviews i{
+    color: gold;
+}
+
+.total-clicks i{
+    color: gray;
+}
+.custom-card.users i:nth-of-type(2),
+.custom-card.total-links i:nth-of-type(2),
+.custom-card.total-reviews i:nth-of-type(2),
+.custom-card.total-clicks i:nth-of-type(2) {
+    color: #000000;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-second {
+    background-color: #1e1e1e; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for cards */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    width: 100%; /* Set to 100% to make the card container responsive */
+    max-width: 500px; /* Prevent the card from growing too wide */
+    height: 550px;
+    opacity: 0;
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.card-second.fade-in{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-second img {
+    border-radius: 8px;
+    width: 100%; /* Ensure it fills the container */
+    height: 300px; /* Fixed height for image */
+    object-fit: cover; /* Ensure the image covers the area without stretching */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* 🎥 Card Hover Effects */
+.card-second:hover img {
+    transform: scale(1.1); /* Image zoom effect */
+}
+
+.card-second:hover {
+    background-color: #333; 
+    color: #f8f9fa;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Hover shadow effect */
+    cursor: pointer;
+}
+
+.special{
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: 30px;
+}
+.special:hover{
+    background-color: #138496;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.nyan-cat {
+    width: 250px; /* Adjust the size of the cat */
+    display: block;
+    z-index: 1000;
+    animation: nyanFly 10s linear forwards;
+}
+
+/* Animation for flying across the screen */
+@keyframes nyanFly {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(var(--end-x), var(--end-y));
+    }
+}

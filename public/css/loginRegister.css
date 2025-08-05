@@ -1,0 +1,179 @@
+/* Importing Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+/* General Styles for All Elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+  background: url("../resources/background2.jpg"), #000; /* Background image */
+}
+
+/* Body Background Overlay */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Wrapper Styles for Form Container */
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(233, 198, 1, 0.5); /* Border with transparency */
+  backdrop-filter: blur(8px); /* Blurring background */
+  -webkit-backdrop-filter: blur(150px); /* Safari support for blur */
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Text Styling */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Transparent text fill */
+  animation: flicker 2s infinite alternate; /* Flickering animation */
+}
+
+/* Flicker Animation for Text */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+/* Input Field Styling */
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+/* Label Styling Inside Input Fields */
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+/* Input Field Styling */
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Adjust Label Position When Input is Focused or Valid */
+.input-field input:focus~label,
+.input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+/* Button Styling */
+.wrapper button , .backLog{
+  text-decoration: none;
+  margin: 5px;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2); /* Soft button shadow */
+}
+
+/* Gradient Button Styles */
+.logBtn, .backLog{
+  background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient background */
+  color: white;
+  border: #000;
+}
+
+/* Register Button Styling */
+.registerBtn{
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 1.2rem;
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+  background-color: #000;
+}
+
+/* Button Hover Effects */
+.wrapper button:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Register and Back Button Hover Effects */
+.wrapper .register .registerBtn:hover, .backLog:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Text Styling for Register Paragraph */
+.wrapper .register p{
+  color: white;
+}
+
+/* Back Button Padding */
+.backLog{
+  padding: 6px 8px;
+}
+
+/* Footer Styling */
+footer {
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff;
+    text-align: center; 
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 10; /* Ensure footer stays on top */
+}

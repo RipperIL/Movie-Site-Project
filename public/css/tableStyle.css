@@ -1,0 +1,132 @@
+/* Table Header Column Widths */
+.custom-table th:nth-child(1) { width: 25%; } /* Link Name */
+.custom-table th:nth-child(2) { width: 30%; } /* Description */
+.custom-table th:nth-child(3) { width: 15%; } /* Link */
+.custom-table th:nth-child(4) { width: 5%;  } /* Privacy */
+.custom-table th:nth-child(5) { width: 15%; } /* Actions */
+.custom-table th:nth-child(6) { width: 10%; } /* Rating */
+
+
+/* General Styling for Table Headers */
+.custom-table th {
+    background-color: #272626;
+    text-align: center;
+    padding: 12px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flicker 2s infinite alternate; /* Flickering effect */
+}
+
+.custom-h{
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ffcc00, #ff6600); /* Gradient text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: flicker 2s infinite alternate; /* Flickering effect */
+}
+
+/* Table Responsiveness */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+}
+
+/* Custom Table Styling */
+.custom-table {
+    min-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for Buttons in the Table */
+.custom-table .btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effects */
+.custom-table .btn-outline-primary:hover {
+    color: black;
+    background-color:lightblue;
+}
+
+.custom-table .btn-info:hover {
+    background-color: #138496;
+}
+
+.custom-table .btn-warning:hover {
+    background-color: #927419;
+}
+
+.custom-table .btn-danger:hover {
+    background-color: #c82333;
+}
+
+.custom-table .btn i {
+    margin-right: 5px; /* Add space between icon and text */
+}
+
+/* Custom Danger Button */
+.custom-danger{
+    background-color: red;
+    color: black;
+    padding: 4px 6px;
+    border-color: #000000;
+    margin:5px;
+    animation: flicker 2s infinite alternate;
+}
+
+/* Hover effect for custom-danger */
+.custom-danger:hover{
+    background: rgb(145, 41, 41);
+}
+
+/* Custom Dark Button */
+.btn-dark{
+    border-color: white;
+}
+
+/* Custom Danger Button with larger padding */
+.custom-danger-second{
+    background-color: red;
+    color: black;
+    padding: 6px 8px;
+    border-color: #000000;
+    animation: flicker 2s infinite alternate;
+}
+
+/* Hover effect for custom-danger-second */
+.custom-danger-second:hover{
+    background: rgb(145, 41, 41);
+}
+
+/* Custom Primary Button with second design */
+.btn-primary-second{
+    background-color: #ffae00;
+    border-color: #000000;
+    color: black;
+    animation: flicker 2s infinite alternate;
+}
+
+/* Hover effect for btn-primary-second */
+.btn-primary-second:hover{
+    background-color: #ffbb00;
+    border-color: #000000;
+}
+
+/* 🎞️ Flickering Animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}

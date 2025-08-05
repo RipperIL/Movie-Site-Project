@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" type="image/x-icon" href="/resources/icon.svg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/loginRegister.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  
+   <!-- Simple login form -->
+  <div class="wrapper">
+    <form id="loginForm" action="/users/login" method="POST">
+      <h2>Login</h2>
+      <div class="input-field">
+        <input type="text" name="email" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" name="password" required>
+        <label>Enter your password</label>
+      </div>
+      <button class="logBtn"type="submit">Login</button>
+      <div class="register">
+        <p>Don't have an account? <a class="registerBtn" href="/register"><u>Register</u></a></p>
+      </div>
+    </form>
+  </div>
+
+  <!-- On failed login -->
+  <% if (error && error.length > 0) { %>
+    <script>
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: '<%= error %>',
+        color: "#716add",
+        cancelButtonText: `<i class="fa fa-thumbs-down">Sorry!</i>`,
+      });
+    </script>
+  <% } %>
+
+   <!-- On successful login -->
+  <% if (success && success.length > 0) { %>
+    <script>
+      Swal.fire({
+        icon: 'success',
+        title: 'Success!',
+        text: '<%= success %>',
+        color: "#716add",
+        timer: 900,
+        showConfirmButton: false,
+      }).then(()=>{
+          window.location.href = '/';
+      },900);
+    </script>
+  <% } %>
+
+</body>
+</html>
