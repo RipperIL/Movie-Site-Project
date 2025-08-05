@@ -20,5 +20,3 @@ password: a
 5) There are no links or reviews in the database because I use SQLite3 AND MongoDB,
 SQLite is LOCAL, while MongoDB is not.
 pictures added of the databases while fully active.
-
-6) ADDED THE SQLITE TABLE IF NEEDED, CHANGE HIS NAME INTO - linksDatabase.sqlite
